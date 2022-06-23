@@ -1,16 +1,19 @@
 package ocean;
 
 public class Submarine {
-    private int horizontal = 0;
-    private int vertical = 0;
+    private final int horizontal = 0;
+    private final int vertical = 0;
+
+    private final int[] position = new int[]{this.horizontal, this.vertical};
 
 
     public void move(int horizontal, int  vertical) {
-        this.horizontal += horizontal;
-        this.vertical += vertical;
+        this.position[0] += horizontal;
+        this.position[1] += vertical;
     }
 
     public int[] getPosition(){
-        return new int[]{this.horizontal, this.vertical};
+
+        return position;
     }
 }

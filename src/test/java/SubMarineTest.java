@@ -20,5 +20,10 @@ public class SubMarineTest {
         Assert.assertEquals(4, floater.getPosition()[1]);
     }
 
+    @Test
+    public void positionAlwaysInOnePlaceInMemory(){
+        Assert.assertEquals(floater.getPosition(), floater.getPosition());
+    }
+
 
 }
